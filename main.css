@@ -1,0 +1,32 @@
+
+html{
+    /*width: 1000px;*/
+}
+
+.Userinfo{
+    background: #eee;
+    border: 1px solid #ccc;
+    padding: 10px;
+    float: left;
+    width: 50%;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    height: 150px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    display: flex;
+    position: relative;
+   border: 2px solid black;;
+}
+p{
+    width: 50%;
+}
+h4{
+    width: 50%;
+}
+button{
+    position: absolute;
+    bottom: 10%;
+}
