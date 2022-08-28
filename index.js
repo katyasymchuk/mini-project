@@ -16,16 +16,13 @@ arrayuser.classList.add('Users');
             listuser.classList.add('Userinfo');
             arrayuser.appendChild(listuser);
 
-            let id = document.createElement('p');
-            id.innerText = user.id;
-            listuser.appendChild(id);
+            let idname = document.createElement('p');
+            idname.innerText = `${user.id} - ${user.name}`;
+            listuser.appendChild(idname);
 
-            let name = document.createElement('h4');
-            name.innerText = user.name;
-            listuser.appendChild(name);
 
     let detailsBtn = document.createElement("button");
-            detailsBtn.innerText = 'Переглянути інфо';
+            detailsBtn.innerText = 'View info';
 
             detailsBtn.onclick = function () {
 

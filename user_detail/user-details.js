@@ -68,6 +68,7 @@ fetch(`https://jsonplaceholder.typicode.com/users/${id}`)
                 .then(posts => {
                     for (const post of posts){
                         let postiddiv = document.createElement('div');
+                        postiddiv.classList.add('Postiddiv')
                         postiddiv.innerText = `Id post - ${post.id}
                         Title - "${post.title}`;
                         postdiv.appendChild(postiddiv);
@@ -80,8 +81,9 @@ fetch(`https://jsonplaceholder.typicode.com/users/${id}`)
             click.push(post);
             localStorage.setItem('post', JSON.stringify(click));
             location.href = `../post_detail/post-details.html?id=${id}&postId=${post.id}`;
+
 }
-        postdiv.appendChild(postBtn);
+                        postiddiv.appendChild(postBtn);
 
 
                     }

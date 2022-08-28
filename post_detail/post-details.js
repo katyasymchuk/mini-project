@@ -15,6 +15,11 @@ let maindiv = document.createElement("div");
 maindiv.classList.add('Main');
 document.body.appendChild(maindiv);
 
+let title = document.createElement("div");
+title.classList.add('Title');
+title.innerText = 'Post details'
+maindiv.appendChild(title);
+
 fetch(`https://jsonplaceholder.typicode.com/posts/${postId}`)
     .then(response => response.json())
     .then(posts => {
@@ -55,23 +60,29 @@ fetch(`https://jsonplaceholder.typicode.com/posts/${postId}/comments`)
         maindiv.appendChild(infodiv);
 
 for (const comment of comments){
-
+        let commentdiv = document.createElement("div");
+    commentdiv.classList.add('Comment');
+    infodiv.appendChild(commentdiv);
 
     let idcomment = document.createElement("div");
-    idcomment.innerText = `Comment id - ${comment.id}`
-    infodiv.appendChild(idcomment);
+    idcomment.innerText = `Comment id - 
+    ${comment.id}`
+    commentdiv.appendChild(idcomment);
 
     let nameDiv = document.createElement("div");
-    nameDiv.innerText = `Nickname - ${comment.name}`
-    infodiv.appendChild(nameDiv);
+    nameDiv.innerText = `Nickname - 
+    ${comment.name}`
+    commentdiv.appendChild(nameDiv);
 
     let emailDiv = document.createElement("div");
-    emailDiv.innerText = `Сommenter's email - ${comment.email}`
-    infodiv.appendChild(emailDiv);
+    emailDiv.innerText = `Сommenter's email - 
+    ${comment.email}`
+    commentdiv.appendChild(emailDiv);
 
     let bodyDiv = document.createElement("div");
-    bodyDiv.innerText = `Comment - ${comment.body}`
-    infodiv.appendChild(bodyDiv);
+    bodyDiv.innerText = `Comment - 
+    ${comment.body}`
+    commentdiv.appendChild(bodyDiv);
 
 
 }
